@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Katalog aplikasi SenApps.">
+  <title>Katalog Aplikasi — SenApps</title>
+  <style>
+    :root { --ink: #17251e; --muted: #58685f; --paper: #f4f7f2; --green: #176b4b; --line: #dce6dd; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(900px, calc(100% - 36px)); margin: 48px auto; }
+    article { padding: clamp(24px, 6vw, 58px); border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+    a { color: var(--green); }
+    h1 { margin: 8px 0; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; letter-spacing: -.04em; }
+    .muted { color: var(--muted); }
+    .app { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 28px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: #fbfdfb; }
+    .app h2 { margin: 0 0 4px; font-size: 1.25rem; }
+    .app p { margin: 0 0 12px; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .actions a { font-weight: 700; }
+    .badge { padding: 8px 12px; border-radius: 999px; background: #e7f2eb; color: var(--green); font-size: .82rem; font-weight: 700; }
+    @media (max-width: 560px) { .app { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <a href="../">← Beranda SenApps</a>
+      <h1>Katalog Aplikasi</h1>
+      <p class="muted">Jelajahi aplikasi SenApps, fitur, dan informasi privasinya.</p>
+      <section class="app" aria-labelledby="rupika-title">
+        <div>
+          <h2 id="rupika-title">Rupika</h2>
+          <p>[Tambahkan deskripsi singkat aplikasi Rupika dan fitur utamanya.]</p>
+          <div class="actions">
+            <a href="../privacy-policy/rupika/">Privacy Policy Rupika</a>
+            <!-- Tambahkan tautan Google Play di sini setelah tersedia. -->
+          </div>
+        </div>
+        <span class="badge">Aplikasi SenApps</span>
+      </section>
+      <!-- Gandakan blok .app ini untuk setiap aplikasi baru. -->
+    </article>
+  </main>
+</body>
+</html>

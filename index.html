@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SenApps — profil pengembang dan katalog aplikasi.">
+  <title>SenApps — Aplikasi yang berguna untuk keseharian</title>
+  <style>
+    :root { --ink: #17251e; --muted: #58685f; --paper: #f4f7f2; --green: #176b4b; --line: #dce6dd; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    main { width: min(980px, calc(100% - 36px)); margin: 7vh auto; }
+    .card { padding: clamp(28px, 7vw, 76px); border: 1px solid var(--line); border-radius: 24px; background: #fff; box-shadow: 0 18px 55px #193d2910; }
+    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 700px; margin: 12px 0 16px; font-size: clamp(2.6rem, 8vw, 5rem); line-height: 1.02; letter-spacing: -.055em; }
+    p { color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    a.button { display: inline-block; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; color: var(--green); font-weight: 700; text-decoration: none; }
+    a.button.primary { border-color: var(--green); background: var(--green); color: #fff; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="title">
+      <div class="eyebrow">Profil pengembang</div>
+      <h1 id="title">SenApps</h1>
+      <p>SenApps membuat aplikasi yang praktis dan mudah digunakan. Jelajahi aplikasi kami dan temukan informasi privasinya.</p>
+      <nav class="links" aria-label="Navigasi utama">
+        <a class="button primary" href="apps/">Lihat Katalog Aplikasi</a>
+        <a class="button" href="mailto:[EMAIL KONTAK]">Hubungi SenApps</a>
+      </nav>
+      <footer>© <span id="year"></span> SenApps</footer>
+    </section>
+  </main>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
