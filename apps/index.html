@@ -1,48 +1,37 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="id">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Katalog aplikasi SenApps.">
+  <meta name="description" content="Jelajahi aplikasi yang dibuat oleh SenApps.">
   <title>Katalog Aplikasi — SenApps</title>
-  <style>
-    :root { --ink: #17251e; --muted: #58685f; --paper: #f4f7f2; --green: #176b4b; --line: #dce6dd; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
-    main { width: min(900px, calc(100% - 36px)); margin: 48px auto; }
-    article { padding: clamp(24px, 6vw, 58px); border: 1px solid var(--line); border-radius: 22px; background: #fff; }
-    a { color: var(--green); }
-    h1 { margin: 8px 0; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; letter-spacing: -.04em; }
-    .muted { color: var(--muted); }
-    .app { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 28px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: #fbfdfb; }
-    .app h2 { margin: 0 0 4px; font-size: 1.25rem; }
-    .app p { margin: 0 0 12px; color: var(--muted); }
-    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
-    .actions a { font-weight: 700; }
-    .badge { padding: 8px 12px; border-radius: 999px; background: #e7f2eb; color: var(--green); font-size: .82rem; font-weight: 700; }
-    @media (max-width: 560px) { .app { grid-template-columns: 1fr; } }
-  </style>
-  <link rel="stylesheet" href="../assets/styles.css?v=2">
+  <link rel="stylesheet" href="../assets/styles.css?v=3">
+  <script src="../assets/scripts/catalog.js" defer></script>
 </head>
 <body>
-  <main>
-    <article>
-      <a class="site-brand" href="../"><img src="../assets/senapps-logo.svg" alt="Logo SenApps"><span>SenApps</span></a>
-      <h1>Katalog Aplikasi</h1>
-      <p class="muted">Jelajahi aplikasi SenApps, fitur, dan informasi privasinya.</p>
-      <section class="app" aria-labelledby="rupika-title">
-        <div>
-          <h2 id="rupika-title">Rupika</h2>
-          <p>[Tambahkan deskripsi singkat aplikasi Rupika dan fitur utamanya.]</p>
-          <div class="actions">
-            <a href="../privacy-policy/rupika/">Privacy Policy Rupika</a>
-            <!-- Tambahkan tautan Google Play di sini setelah tersedia. -->
-          </div>
-        </div>
-        <span class="badge">Aplikasi SenApps</span>
-      </section>
-      <!-- Gandakan blok .app ini untuk setiap aplikasi baru. -->
-    </article>
+  <header class="site-header shell">
+    <a class="site-brand" href="../"><img src="../assets/senapps-logo.svg" alt=""><span>SenApps</span></a>
+    <nav class="catalog-nav" aria-label="Navigasi utama">
+      <a href="../">Beranda</a><a href="#catalog-list" aria-current="page">Aplikasi</a>
+      <a href="mailto:senaalwaa@gmail.com">Kontak</a>
+    </nav>
+  </header>
+  <main class="catalog-main shell">
+    <section class="catalog-intro">
+      <p class="eyebrow">Dari SenApps</p>
+      <h1>Katalog aplikasi</h1>
+      <p class="catalog-lead">Temukan aplikasi yang dirancang untuk membantu aktivitas sehari-hari.</p>
+    </section>
+    <section id="catalog-list" aria-labelledby="catalog-title">
+      <h2 id="catalog-title" class="visually-hidden">Daftar aplikasi</h2>
+      <div class="catalog-controls">
+        <div class="search-field"><label for="app-search">Cari aplikasi</label><input id="app-search" type="search" placeholder="Nama, kategori, atau deskripsi" autocomplete="off"></div>
+        <div class="filter-field"><label for="category-filter">Kategori</label><select id="category-filter"><option value="">Semua kategori</option></select></div>
+      </div>
+      <p id="catalog-status" class="catalog-status" role="status" aria-live="polite">Memuat katalog aplikasi…</p>
+      <div id="app-grid" class="app-grid"></div>
+    </section>
   </main>
+  <footer class="site-footer shell"><span>© SenApps</span><a href="mailto:senaalwaa@gmail.com">Dukungan: senaalwaa@gmail.com</a></footer>
 </body>
 </html>

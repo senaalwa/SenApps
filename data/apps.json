@@ -1,0 +1,24 @@
+{
+  "apps": [{
+    "id": "rupika",
+    "name": "Rupika",
+    "category": "Keuangan Pribadi",
+    "shortDescription": "Aplikasi pengelolaan keuangan pribadi untuk mencatat pemasukan dan pengeluaran.",
+    "description": "Rupika membantu mencatat pemasukan dan pengeluaran, mengelompokkan transaksi, serta melihat saldo dan ringkasan keuangan. Aplikasi juga menyediakan ekspor atau backup data.",
+    "icon": null,
+    "screenshots": [],
+    "features": [
+      "Mencatat pemasukan dan pengeluaran.",
+      "Mengelompokkan transaksi berdasarkan kategori.",
+      "Menampilkan saldo dan ringkasan keuangan.",
+      "Mengekspor atau mencadangkan data."
+    ],
+    "status": "in-development",
+    "platforms": [],
+    "playStoreUrl": null,
+    "detailPage": "apps/rupika/",
+    "privacyPolicy": "privacy-policy/rupika/",
+    "supportEmail": "senaalwaa@gmail.com",
+    "featured": true
+  }]
+}
